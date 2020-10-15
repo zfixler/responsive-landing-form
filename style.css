@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+/* ===============
+=== Typography ===
+=============== */
+h1 {
+    font-weight: 300;
+    font-size: 3rem;
+    border: 8px solid  rgb(223, 219, 219);
+    width: fit-content;
+    padding: .5em;
+}
+
+strong {
+    font-weight: 800;
+}
+
+.landing-head {
+    color: rgb(240, 240, 240);
+}
+
+.top-text {
+    order: -1;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+    border-top: 5px solid rgb(240, 240, 240);
+}
+
+.photo-credit {
+    font-size: .75rem;
+}
+
+.photo-credit a{
+    /* text-decoration: none; */
+    color: inherit;
+    cursor: pointer;
+}
+
+/* ===========
+=== Layout ===
+=========== */
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    background-color:rgb(240, 240, 240);
+}
+
+.landing-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(75, 74, 74);
+    background-image: url("./images/hatham-1n1GnnTyZFY-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    width: 50%;
+    height: 100vh;
+    padding: 0 1em;
+}
+
+.landing-info {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.info-title {
+    text-transform: uppercase;
+    
+}
+
+.info-p {
+    width: 75%;
+    line-height: 1.7rem;
+    font-weight: 300;
+}
+
+.disclaimer {
+    width: 50%;
+    font-weight: 100;
+    font-size: .6rem;
+}
+
+/* ===========
+==== Form ====
+=========== */
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.input,
+.button {
+    margin: .30em;
+    padding: .5em 1em;
+    border-radius: .5em;
+    border: 1px solid darkslategray;
+    font-family: inherit;
+}
+
+.button {
+    font-weight: 400;
+    color:rgb(240, 240, 240);
+    background-color: rgb(75, 74, 74);
+    transform: scale(1);
+    transition: transform 250ms;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus,
+.input:focus {
+    transform: scale(1.05);
+}
+
+
+/* ================
+== Media Queries ==
+================ */
+
+
+@media (max-width: 600px){
+    h1 {
+        font-size: 2rem;
+        max-width: 80%;
+        margin: 0 1em;
+        width: fit-content;
+    }
+    .top-text,
+    .photo-credit {
+        font-size: .5rem;
+    }
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .landing-head {
+        width: 100%;
+        max-height: 400px;
+        margin: 0 auto;
+        padding: 0;
+        min-height: 300px;
+    }
+    .info-title{
+        margin-top: 1.5em;
+    }
+    .landing-info {
+        padding-bottom: 2em;
+        width: 90%;
+        max-height: 500px;
+    }
+    .info-p{
+        width: 100%;
+    }
+}
